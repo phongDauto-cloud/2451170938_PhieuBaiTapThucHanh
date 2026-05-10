@@ -5,7 +5,21 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 2rem;
 }
+
+.hero h1 {
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+.hero h1 .highlight {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
 @media(min-width: 1024px){
     .hero h1{
         font-size: 3.5rem;
@@ -20,8 +34,23 @@
 
 .hero p{
     font-size: 1.25rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.95;
 }
 
-.hero a{
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
