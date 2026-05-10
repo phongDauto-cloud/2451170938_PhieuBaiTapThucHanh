@@ -6,3 +6,5 @@
   --color-text: #334155;
   --font-main: 'Segoe UI', sans-serif;
 }
+.menu-toggle { display: none; }
+.menu-toggle:checked ~ nav { display: flex; }
