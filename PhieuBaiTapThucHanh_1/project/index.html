@@ -5,219 +5,263 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/footer.css">
+
+</head>
 
 <body>
-    <header>
-        <div class="logo">Hoàng Minh Phong</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Hi, I'm Hoàng Minh Phong</h1>
-        <p>Full-Stack Developer | UI Designer | Problem Solver</p>
-        <a href="#portfolio" class="cta-button">View My Work</a>
-    </section>
-    <section id="about" class="about-section">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-5" href="#">Hoàng Minh Phong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient py-5 py-md-8 text-center text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 500px; display: flex; align-items: center;">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="/avatar_profile/avatar.jpg" alt="Profile Photo">
+            <h1 class="display-4 fw-bold mb-3">Hi, I'm Hoàng Minh Phong</h1>
+            <p class="lead mb-4 fs-5">Full-Stack Developer | UI Designer | Problem Solver</p>
+            <a href="#portfolio" class="btn btn-light btn-lg">View My Work</a>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-5">
+                    <img src="project/avatar_profile/avatar.jpg" alt="Profile Photo" class="img-fluid rounded-circle shadow">
                 </div>
-                <div class="about-content">
-                    <h2>About Me</h2>
-                    <p class="lead">I'm a college student learning web development with zero prior experience.
-                    </p>
-                    <p>I don't have any professional experience and i don't know wht I am here.</p>
+                <div class="col-md-7">
+                    <h2 class="display-5 fw-bold mb-4">About Me</h2>
+                    <p class="lead mb-3">I'm a college student learning web development with zero prior experience.</p>
+                    <p class="text-muted">Passionate about creating beautiful and functional web experiences. Currently expanding my skills in modern web technologies.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="skills" class="skills-section">
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
         <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">HTML5</span>
-                        <span class="skill-percent">60%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">CSS3</span>
-                        <span class="skill-percent">60%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
+            <h2 class="display-5 fw-bold text-center mb-5">My Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold">HTML5</span>
+                            <span class="text-muted">60%</span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 60%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-percent">29%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 29%"></div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold">CSS3</span>
+                            <span class="text-muted">60%</span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 60%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">React</span>
-                        <span class="skill-percent">50%</span>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold">JavaScript</span>
+                            <span class="text-muted">29%</span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 29%"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 50%"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold">React</span>
+                            <span class="text-muted">50%</span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 50%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-//phần project
-    </section>    <section id="portfolio" class="portfolio-section">
+    </section>    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
         <div class="container">
-            <h2>My Portfolio</h2>
-            <div class="portfolio-filters">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Web</button>
-                <button class="filter-btn">Mobile</button>
-                <button class="filter-btn">Design</button>
+            <h2 class="display-5 fw-bold text-center mb-5">My Portfolio</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="text-center mb-5">
+                <button class="btn btn-outline-dark btn-sm active me-2" data-filter="all">All</button>
+                <button class="btn btn-outline-dark btn-sm me-2" data-filter="web">Web</button>
+                <button class="btn btn-outline-dark btn-sm me-2" data-filter="mobile">Mobile</button>
+                <button class="btn btn-outline-dark btn-sm" data-filter="design">Design</button>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 1">
-                    <div class="portfolio-overlay">
-                        <h3>E-Commerce Website</h3>
-                        <p>React + Node.js</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="design">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 3">
-                    <div class="portfolio-overlay">
-                        <h3>Brand Identity</h3>
-                        <p>Adobe Illustrator</p>
+
+            <!-- Portfolio Grid -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
+                    <div class="card h-100 shadow-sm portfolio-card">
+                        <img src="https://via.placeholder.com/400x300?text=E-Commerce" class="card-img-top" alt="E-Commerce Website">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce Website</h5>
+                            <p class="card-text text-muted">React + Node.js</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Web Project -->
-                <div class="portfolio-item" data-category="web">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 4">
-                    <div class="portfolio-overlay">
-                        <h3>Portfolio Website</h3>
-                        <p>HTML + CSS + JS</p>
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="design">
+                    <div class="card h-100 shadow-sm portfolio-card">
+                        <img src="https://via.placeholder.com/400x300?text=Brand+Identity" class="card-img-top" alt="Brand Identity">
+                        <div class="card-body">
+                            <h5 class="card-title">Brand Identity</h5>
+                            <p class="card-text text-muted">Adobe Illustrator</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Mobile Project -->
-                <div class="portfolio-item" data-category="mobile">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 5">
-                    <div class="portfolio-overlay">
-                        <h3>Food Delivery App</h3>
-                        <p>React Native</p>
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
+                    <div class="card h-100 shadow-sm portfolio-card">
+                        <img src="https://via.placeholder.com/400x300?text=Portfolio" class="card-img-top" alt="Portfolio Website">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text text-muted">HTML + CSS + JS</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Design Project -->
-                <div class="portfolio-item" data-category="design">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 6">
-                    <div class="portfolio-overlay">
-                        <h3>UI Kit</h3>
-                        <p>Figma</p>
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="mobile">
+                    <div class="card h-100 shadow-sm portfolio-card">
+                        <img src="https://via.placeholder.com/400x300?text=Food+Delivery" class="card-img-top" alt="Food Delivery App">
+                        <div class="card-body">
+                            <h5 class="card-title">Food Delivery App</h5>
+                            <p class="card-text text-muted">React Native</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Mobile Project 2 -->
-                <div class="portfolio-item" data-category="mobile">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 7">
-                    <div class="portfolio-overlay">
-                        <h3>Chat Application</h3>
-                        <p>React + Firebase</p>
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="design">
+                    <div class="card h-100 shadow-sm portfolio-card">
+                        <img src="https://via.placeholder.com/400x300?text=UI+Kit" class="card-img-top" alt="UI Kit">
+                        <div class="card-body">
+                            <h5 class="card-title">UI Kit</h5>
+                            <p class="card-text text-muted">Figma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 portfolio-item" data-category="mobile">
+                    <div class="card h-100 shadow-sm portfolio-card">
+                        <img src="https://via.placeholder.com/400x300?text=Chat+App" class="card-img-top" alt="Chat Application">
+                        <div class="card-body">
+                            <h5 class="card-title">Chat Application</h5>
+                            <p class="card-text text-muted">React + Firebase</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <a href="#lightbox-1" class="lightbox-link">
-        <img src="..." alt="...">
-    </a>
-
-    <div id="lightbox-1" class="lightbox">
-        <img src="..." alt="...">
-        <a href="#" class="lightbox-close">&times;</a>
-    </div>
-    <section id="contact" class="contact-section">
-     <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Feel free to reach out. I'm always open to discussing new projects.</p>
-                    <div class="info-item">
-                        <span class="icon">📧</span>
-                        <span>hmp2k6@gmail.com</span>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Get In Touch</h2>
+            
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h4 class="mb-4">Contact Information</h4>
+                    <p class="text-muted mb-4">Feel free to reach out. I'm always open to discussing new projects.</p>
+                    
+                    <div class="mb-3 d-flex align-items-center">
+                        <span class="fs-5 me-3">📧</span>
+                        <a href="mailto:hmp2k6@gmail.com" class="text-decoration-none">hmp2k6@gmail.com</a>
                     </div>
-                    <div class="info-item">
-                        <span class="icon">📍</span>
+                    <div class="mb-3 d-flex align-items-center">
+                        <span class="fs-5 me-3">📍</span>
                         <span>Hanoi, Vietnam</span>
                     </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
                 </div>
-        </div>
-</section>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">YourName</div>
-                <p class="footer-tagline">Building digital experiences</p>
-                <div class="social-links">
-                    <a href="https://github.com/phongDauto-cloud" class="social-link" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                        </svg>
-                    </a>
 
-                    <a href="mailto:hmp2k6@gmail.com" class="social-link" aria-label="Email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 12.713l-11.99-7.713v13.999h23.98v-13.999l-11.99 7.713zm0-2.427l10.99-7.086h-21.98l10.99 7.086z" />
-</svg>
-                </a>
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-                                <p>&copy; 2026 Hoang Minh Phong. All rights reserved.</p>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Hoàng Minh Phong</h5>
+                    <p class="text-muted">Building digital experiences</p>
+                </div>
+                <div class="col-md-8 text-md-end">
+                    <div class="mb-3">
+                        <a href="https://github.com/phongDauto-cloud" class="text-white me-3 text-decoration-none" aria-label="GitHub">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="mailto:hmp2k6@gmail.com" class="text-white me-3 text-decoration-none" aria-label="Email">
+                            <i class="bi bi-envelope"></i> Email
+                        </a>
                     </div>
                 </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted">
+                <p>&copy; 2026 Hoang Minh Phong. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
 </body>
 
 </html>
